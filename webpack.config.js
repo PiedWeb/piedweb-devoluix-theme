@@ -79,9 +79,8 @@ const config = {
         new CleanWebpackPlugin(['dist']),
         //new FaviconsWebpackPlugin('./src/img/logo_title.png'),
         new CopyWebpackPlugin([{from:'./src/demo/html/img', to: 'img'}]),
-        new MiniCssExtractPlugin({ // define where to save the file
+        new MiniCssExtractPlugin({
             filename: "app.css",
-            chunkFilename: "[id].css"
         }),
         new HtmlWebpackPlugin({
             filename: 'index.html',
@@ -137,5 +136,5 @@ var prodConfig = Object.assign({}, config, {
 });
 
 module.exports = [
-    devConfig
+    devConfig//, prodConfig
 ];

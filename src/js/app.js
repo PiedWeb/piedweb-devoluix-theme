@@ -6,6 +6,7 @@ import "bootstrap.native";
 
 import {
   fullHeight,
+  navbarOnScroll,
   wideImgCentered,
   smoothScrollHash,
   clickable,
@@ -61,6 +62,9 @@ document.addEventListener("DOMContentLoaded", function() {
   readableEmail("contact-email");
 
   responsiveBackgrounds();
+
+
+  navbarOnScroll();
 
   //register('/service-worker.js');
 

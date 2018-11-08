@@ -6502,11 +6502,12 @@ body {
     margin-left: 1rem; }
 
 /**/
-.navbar {
+@media (max-width: 991.98px) {
+  .navbar {
+    background-color: rgba(0, 0, 0, 0.5); } }
+
+.nostick {
   background-color: rgba(0, 0, 0, 0.5); }
-  @media (max-width: 991.98px) {
-    .navbar {
-      background-color: rgba(0, 0, 0, 0.5); } }
 
 @media (max-width: 991.98px) {
   .navbar-nav {

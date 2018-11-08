@@ -1,9 +1,13 @@
 /**/
 .navbar{
-	background-color: rgba(0,0,0,.5);//background-color:transparent;
+	//background-color: rgba(0,0,0,.5);//background-color:transparent;
 	@include media-breakpoint-down(md) {
 		 background-color: rgba(0,0,0,.5);
 	}
+}
+
+.nostick {
+		 background-color: rgba(0,0,0,.5);
 }
 
 @include media-breakpoint-down(md){

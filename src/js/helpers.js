@@ -23,6 +23,18 @@ export function imgLazyLoad() {
   });
 }
 
+export function navbarOnScroll() {
+    window.onscroll = function(){
+        if (pageYOffset > 50) {
+            if (document.querySelector('.nostick') === null) {
+             document.querySelector('.navbar').className += ' nostick';
+            }
+        } else {
+            document.querySelector('.navbar').classList.remove('nostick');
+        }
+    };
+}
+
 /*
  * Make a div clickable via a <a> contained
  */
