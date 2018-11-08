@@ -1,12 +1,11 @@
 # [Pied Web](https://piedweb.com) : Bootstrap 4 theme without jQuery
 
-Devoluix is a responsive BS4 theme build as light as possible.
+Devoluix is a responsive BS4 theme built as light as possible.
 
 ## Table of contents
 * [Licence](#licence)
-* [Basic Usage](#basicusage)
+* [Basic Usage](#basic-usage)
     * [npm](https://www.npmjs.com/package/piedweb-devoluix-theme)
-* [Usage](#usage)
 * [Contributors](#contributors)
 
 ## Licence
