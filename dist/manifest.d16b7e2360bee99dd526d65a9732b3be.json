@@ -1,0 +1,41 @@
+{
+  "icons": [
+    {
+      "src": "icon_512x512.e3ec5d5e397a6b98648d28cab7f0deaf.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "icon_384x384.bae26289ccb00d7464b94d086bd1cc97.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "icon_256x256.ac55b52d5a3260fc2f6fe48e57a518d8.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "icon_192x192.73ef1209b65cd655471a57fe228540d0.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icon_128x128.367c673b57a03d0cc1a33bfdca512647.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "icon_96x96.874eeab41d0d9fc3362040a2459c3400.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    }
+  ],
+  "name": "My Pied Web App",
+  "short_name": "MyPWA",
+  "orientation": "portrait",
+  "display": "standalone",
+  "start_url": ".",
+  "description": "My awesome Pied Web App!",
+  "background_color": "#1fa67a"
+}

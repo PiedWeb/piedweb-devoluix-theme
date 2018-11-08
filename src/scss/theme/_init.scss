@@ -1,0 +1,119 @@
+::-moz-selection {
+    background-color: $primary;
+    color: $white;
+}
+::selection {
+    background-color: $primary;
+    color: $white;
+}
+
+::-webkit-input-placeholder {
+    color:    #777777;
+    font-weight: 300;
+}
+:-moz-placeholder {
+   color:    #777777;
+   opacity:  1;
+   font-weight: 300;
+}
+::-moz-placeholder {
+   color:    #777777;
+   opacity:  1;
+   font-weight: 300;
+}
+:-ms-input-placeholder {
+   color:    #777777;
+   font-weight: 300;
+}
+::-ms-input-placeholder {
+   color:    #777777;
+   font-weight: 300;
+}
+
+// Helpers
+.letter-spacing {
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.clickable:hover {
+    cursor: pointer;
+}
+
+.section-gap {
+	padding: 100px 0;
+}
+
+.section-light {
+	background-color:$light;
+}
+
+.card-plain {
+    background: transparent;
+    box-shadow: none;
+}
+
+.p1-gradient-bg {
+  background-image: -moz-linear-gradient( 0deg, $dark-primary 0%, $primary 100%);
+  background-image: -webkit-linear-gradient( 0deg, $dark-primary 0%, $primary 100%);
+  background-image: -ms-linear-gradient( 0deg, $dark-primary 0%, $primary 100%);
+}
+
+.p1-gradient-color {
+  background: -moz-linear-gradient( 0deg, $dark-primary 0%, $primary 100%);
+  background: -webkit-linear-gradient( 0deg, $dark-primary 0%, $primary 100%);
+  background: -ms-linear-gradient( 0deg, $dark-primary 0%, $primary 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.modal-dialog-video {
+      max-width: 800px;
+      margin: 30px auto;
+  }
+
+.modal-body-video {
+  position:relative;
+  padding:0px;
+}
+.close-video {
+  position:absolute;
+  right:-30px;
+  top:0;
+  z-index:999;
+  font-size:2rem;
+  font-weight: normal;
+  color:#fff;
+  opacity:1;
+}
+
+.mcard {
+    @extend .card;
+    @extend .border-light;
+    @extend .card-plain;
+    margin-bottom: 50px;
+}
+.shadow-color {
+    transform: scale(.94);
+    top: 14px;
+    filter: blur(10px);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    z-index: -1;
+}
+
+.card-header-img {
+    position: relative;
+    padding: 0;
+    z-index: 1;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: -30px;
+    border-radius: 6px;
+}

@@ -1,0 +1,77 @@
+/** Nice Select **/
+.inline {
+    display: inline-block;
+}
+
+
+.dropdwon-click label {
+  position:relative;
+  display:block;
+  padding:0 35px 0 12px;
+  transition:background 0.3s;
+  cursor:pointer;
+  color: #222222;
+  border-bottom: 1px solid #222222;
+}
+
+.dropdown-label:after{
+  border-bottom: 2px solid #999;
+    border-right: 2px solid #999;
+    content: '';
+    display: block;
+    pointer-events: none;
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    -webkit-transform-origin: 66% 66%;
+        -ms-transform-origin: 66% 66%;
+            transform-origin: 66% 66%;
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+    -webkit-transition: all 0.15s ease-in-out;
+    transition: all 0.15s ease-in-out;
+    width: 15px;
+    height: 15px;
+    margin-top: -8px;
+  }
+
+
+.dropdwon-click input:checked ~ .dropdown-label:after{
+  -webkit-transform: rotate(-135deg);
+        -ms-transform: rotate(-135deg);
+            transform: rotate(-135deg);
+}
+
+/*hide the inputs*/
+.dropdwon-click input{display:none}
+
+/*show the second levele menu of the selected voice*/
+.dropdwon-click input:checked ~ ul.dropdwon-menu{
+  max-height:300px;
+  transition:max-height 0.5s ease-in;
+}
+
+/*style for the second level menu*/
+.dropdwon-menu {
+  max-height:0;
+  padding:0;
+  overflow:hidden;
+  list-style-type:none;
+  transition:max-height 0.5s ease-out;
+  position:absolute;
+z-index: 3;
+}
+
+.dropdwon-menu li a{
+  display:block;
+  padding:12px;
+  color: #222222;
+  text-decoration:none;
+  text-align: left;
+  font-size: 0.5em;
+}
+
+.dropdwon-menu li a:hover{
+  color: rgba(0,0,0, 0.7);
+}

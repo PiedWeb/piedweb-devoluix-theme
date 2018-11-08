@@ -1,0 +1,29 @@
+
+.tunnel-header{
+	width: 100% !important;
+    background-color: rgba(0,0,0,.5);
+    text-align: center;
+    padding-top:5px;
+}
+
+.look-disabled {
+    color:#6c757d;
+}
+
+.p-i {
+    width:60px;
+    height:60px;
+    display:block;
+    margin: auto;
+    vertical-align:middle;
+    margin-top: 5px;
+    text-align:center;
+    background-repeat: no-repeat;
+}
+.cb-icon {
+    background-image: url('../img/elements/cb.svg');
+}
+
+.espece-icon {
+    background-image: url('../img/elements/espece.svg');
+}

@@ -1,0 +1,46 @@
+//
+// =Constants
+// --------------------------------------------------
+@import "theme/variables";
+
+//
+// =Bootstrap
+// --------------------------------------------------
+@import "custom-bootstrap";
+
+//
+// =Plugins
+// --------------------------------------------------
+@import "~baguettebox.js/dist/baguetteBox.min.css";
+
+@import "~tiny-slider/src/tiny-slider";
+@import "theme/slider";
+
+@import "theme/fontello";
+/*
+@import '../fonts/fontawesome/scss/regular';
+@import '../fonts/fontawesome/scss/brands';
+@import '../fonts/fontawesome/scss/solid';
+@import '../fonts/fontawesome/scss/fontawesome';
+*/
+
+//
+// =Global
+// --------------------------------------------------
+@import "theme/init";
+@import "theme/spacer";
+@import "theme/switches";
+
+//
+// =Block
+// --------------------------------------------------
+@import "theme/navbar";
+@import "theme/reservation";
+@import "theme/faq";
+@import "theme/contact";
+@import "theme/footer";
+@import "theme/hero-banner";
+@import "theme/hero-video";
+@import "theme/nice-select";
+@import "theme/tunnel";
+@import "theme/cookie-rgpd";

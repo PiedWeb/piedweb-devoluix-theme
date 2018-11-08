@@ -1,0 +1,68 @@
+@font-face {
+  font-family: 'fontello';
+  src: url('../font/fontello.eot?');
+  src: url('../font/fontello.eot?#iefix') format('embedded-opentype'),
+       url('../font/fontello.woff2?') format('woff2'),
+       url('../font/fontello.woff?') format('woff'),
+       url('../font/fontello.ttf?') format('truetype'),
+       url('../font/fontello.svg?#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 fontello;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.fa-arrow-right:before { content: '\e800'; } /* '' */
+.fa-users:before { content: '\e801'; } /* '' */
+.fa-globe:before { content: '\e802'; } /* '' */
+.fa-twtr:before { content: '\f099'; } /* '' */
+.fa-fcb:before { content: '\f09a'; } /* '' */
+.fa-smile-o:before { content: '\f118'; } /* '' */
+.fa-play-circle-o:before { content: '\f144'; } /* '' */
+.fa-inst:before { content: '\f16d'; } /* '' */
+.fa-trpa:before { content: '\f262'; } /* '' */
+.fa-id-card:before { content: '\f2bb'; } /* '' */
+.fa-yot:before { content: '\f167'; } /* '' */
+.fa-list:before { content: '\f0ca'; } /* '' */
+.fa-spinner:before { content: '\f110';  }
+
+.fa-spin {
+    animation: fa-spin 2s infinite linear;
+}
+
+@keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+}
+
+// Source From : https://codepen.io/harrisondempsey/pen/nBGsL
+.icon-rounded {
+    text-align: center;
+    border-radius: .25rem;
+    align-items: center;
+    justify-content: center;
+    display: inline-flex;
+    min-width: 3rem;
+    min-height: 3rem;
+    border-radius: 50%!important;
+}
+@each $color, $value in $colors {
+    .icon-#{$color} {
+        color: $value;
+        //color: $value; //theme-color-level($color, 6)
+        background-color: mix($white, $value, 90%);
+    }
+}

@@ -1,0 +1,93 @@
+.extra-footer {
+    padding: 20px;
+    background-color: $footer-background-color;
+    a {
+        color: $body-color;
+    }
+}
+
+.footer-block{
+    padding-top:100px;
+    background-color: $footer-background-color;
+    h6, .h6{
+        color:#fff;
+        margin-bottom:25px;
+        font-size:18px;
+        font-weight:600;
+    }
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    .footer-social{
+        a{
+            padding-right:25px;
+            @include transition();
+            &:hover{
+                i{
+                    @extend .p1-gradient-color;
+                }
+            }
+        }
+        i{
+            color:#cccccc;
+            @include transition();
+
+        }
+        @include media-breakpoint-down(md) {
+            text-align:left;
+        }
+    }
+    .footer-mail {
+        input {
+            border: none;
+            width: 70% !important;
+            font-weight: 300;
+            background: #191919;
+            color:#777;
+            padding-left:20px;
+            border-radius: 0;
+            font-size: 14px;
+            &:focus {
+                background-color: #191919;
+            }
+        }
+        .info {
+                position:absolute;
+                margin-top:20%;
+                color: #fff;
+                font-size: 12px;
+                &.valid {
+                    color: green;
+                }
+                &.error {
+                    color: red;
+                }
+        }
+        .click-btn{
+            background: rgba(0,0,0,0.9);
+            color: #fff;
+            border-radius: 0;
+            padding: 0px 12px;
+            border:0;
+            font-size:14px;
+        }
+        @include media-breakpoint-down(md) {
+            margin-bottom:30px;
+        }
+    }
+
+    .footer-text {
+        padding-top:20px;
+        a,i{
+            color: $white;
+        }
+        a:hover {
+            color: rgba(250,250,250, 0.7);
+        }
+        li {
+            padding-bottom: 10px;
+        }
+    }
+}
