@@ -19,7 +19,9 @@ import {
 document.addEventListener("DOMContentLoaded", function() {
   "use strict";
 
-  fullHeight(".fullscreen");
+  if (!('fetch' in window)) {
+    fullHeight(".fullscreen");
+  }
   wideImgCentered(".ic");
 
   baguetteBox.run(".mimg", {

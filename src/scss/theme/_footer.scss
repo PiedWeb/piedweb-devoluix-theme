@@ -6,6 +6,8 @@
     }
 }
 
+@include bg-gradient-variant('.footer-block', $footer-background-color);
+
 .footer-block{
     padding-top:100px;
     background-color: $footer-background-color;

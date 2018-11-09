@@ -6615,6 +6615,9 @@ body {
     color: #777777; }
 
 .footer-block {
+  background: #222 linear-gradient(180deg, #434343, #222) repeat-x !important; }
+
+.footer-block {
   padding-top: 100px;
   background-color: #222; }
   .footer-block h6, .footer-block .h6 {
@@ -6680,12 +6683,16 @@ body {
     .footer-block .footer-text li {
       padding-bottom: 10px; }
 
+.fullscreen {
+  height: 100vh; }
+
 .hero-banner {
   color: white; }
   .hero-banner, .hero-banner h1, .hero-banner a:not(.btn-header-light):not(:hover):not(.btn-header) {
     color: white; }
   .hero-banner #cover-banner {
-    background-size: cover; }
+    background-size: cover;
+    background: #1fa67a linear-gradient(180deg, #2c9f7a, #1fa67a) repeat-x; }
   @media (max-width: 991.98px) {
     .hero-banner {
       text-align: center; } }
@@ -6724,7 +6731,8 @@ body {
   overflow: hidden;
   min-height: 200px;
   max-height: 50vh;
-  margin: 0 auto; }
+  margin: 0 auto;
+  background: #1fa67a; }
   .hero-half .hero-half-text, .hero-half .hero-half-text .h3, .hero-half .hero-half-text h2, .hero-half .hero-half-text h1 {
     color: #fff;
     text-align: center; }

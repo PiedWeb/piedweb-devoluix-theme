@@ -11,6 +11,11 @@ $slider-img-height: 300px;
 
 $white			: #fff;
 
+@mixin transition($color) {
+
+}
+$gradientDtB: linear-gradient($primary, $primary, darken($primary, 10%));
+$gradientBtD: linear-gradient($primary, $primary, darken($primary, 10%));
 // Bootstrap Variables
 
 //$success:       $green !default;

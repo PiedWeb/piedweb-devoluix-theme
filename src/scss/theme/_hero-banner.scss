@@ -1,3 +1,7 @@
+.fullscreen {
+    height:100vh;
+}
+
 .hero-banner {
 
     color: white;
@@ -6,7 +10,8 @@
     }
 
     #cover-banner {
-        background-size: cover
+        background-size: cover;
+        background: $primary linear-gradient(180deg, mix($body-color, $primary, 15%), $primary) repeat-x;
     }
 	@include media-breakpoint-down(md) {
 		text-align:center;
@@ -68,6 +73,7 @@
     min-height: 200px;
     max-height: 50vh;
     margin:0 auto;
+    background: $primary;
     .hero-half-text, .hero-half-text .h3, .hero-half-text h2, .hero-half-text h1{
         color: #fff;
         text-align: center;
