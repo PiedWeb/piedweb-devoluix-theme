@@ -2,6 +2,10 @@
 
 Devoluix is a responsive BS4 theme built as light as possible.
 
+<p align="center"><a href="https://piedweb.com">
+<img src="https://raw.githubusercontent.com/PiedWeb/piedweb-devoluix-theme/master/src/img/logo_title.png" width="200" height="200" alt="theme devoluix bootstrap 4" />
+</a></p>
+
 ## Table of contents
 * [Licence](#licence)
 * [Basic Usage](#basic-usage)
