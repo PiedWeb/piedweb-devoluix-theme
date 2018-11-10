@@ -6498,7 +6498,6 @@ body {
   .switch + .switch {
     margin-left: 1rem; }
 
-/**/
 @media (max-width: 991.98px) {
   .navbar {
     background-color: rgba(0, 0, 0, 0.5); } }
@@ -6683,43 +6682,47 @@ body {
 .fullscreen {
   height: 100vh; }
 
-.hero-banner {
+.hero-banner, .hero-banner h1, .hero-banner a:not(.btn-header-light):not(:hover):not(.btn-header) {
   color: white; }
-  .hero-banner, .hero-banner h1, .hero-banner a:not(.btn-header-light):not(:hover):not(.btn-header) {
-    color: white; }
-  .hero-banner #cover-banner {
-    background-size: cover;
-    background: #1fa67a linear-gradient(180deg, #2c9f7a, #1fa67a) repeat-x; }
+
+.hero-banner #cover-banner {
+  background-size: cover;
+  background: #1fa67a linear-gradient(180deg, #2c9f7a, #1fa67a) repeat-x; }
+
+@media (max-width: 991.98px) {
+  .hero-banner {
+    text-align: center; } }
+
+.hero-banner .long-h1 {
+  font-size: 40px; }
+
+.hero-banner .subtitle {
+  margin-bottom: 20px; }
+
+.hero-banner h1 {
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 1em;
+  margin-bottom: 10px; }
+  .hero-banner h1 span {
+    text-transform: uppercase;
+    font-weight: 700; }
   @media (max-width: 991.98px) {
-    .hero-banner {
-      text-align: center; } }
-  .hero-banner .long-h1 {
-    font-size: 40px; }
-  .hero-banner .subtitle {
-    margin-bottom: 20px; }
-  .hero-banner h1 {
-    font-size: 60px;
-    font-weight: 700;
-    line-height: 1em;
-    margin-bottom: 10px; }
-    .hero-banner h1 span {
-      text-transform: uppercase;
-      font-weight: 700; }
-    @media (max-width: 991.98px) {
-      .hero-banner h1 {
-        font-size: 36px; } }
-    @media (max-width: 991.98px) {
-      .hero-banner h1 br {
-        display: none; } }
-    @media (max-width: 1199.98px) {
-      .hero-banner h1 {
-        font-size: 45px; } }
-    @media (max-width: 991.98px) {
-      .hero-banner h1 {
-        font-size: 30px; } }
-  @media (max-width: 800px) {
-    .hero-banner {
-      padding-bottom: 40px; } }
+    .hero-banner h1 {
+      font-size: 36px; } }
+  @media (max-width: 991.98px) {
+    .hero-banner h1 br {
+      display: none; } }
+  @media (max-width: 1199.98px) {
+    .hero-banner h1 {
+      font-size: 45px; } }
+  @media (max-width: 991.98px) {
+    .hero-banner h1 {
+      font-size: 30px; } }
+
+@media (max-width: 800px) {
+  .hero-banner {
+    padding-bottom: 40px; } }
 
 .hero-half {
   position: relative;

@@ -1,7 +1,8 @@
 import BootstrapCookieConsent from "bootstrap-cookie-consent";
-import { tns } from "./../../node_modules/tiny-slider/src/tiny-slider";
+import { tns } from "~/node_modules/tiny-slider/src/tiny-slider";
 import baguetteBox from "baguettebox.js";
-import "bootstrap.native";
+var bsn = require('bootstrap.native/dist/bootstrap-native-v4');
+
 //import { register } from 'register-service-worker'
 
 import {

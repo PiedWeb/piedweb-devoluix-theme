@@ -135,6 +135,7 @@ export function smoothScrollHash() {
  * Manage image responsively
  */
 export function responsiveBackgrounds() {
+  var id = null;
   [].forEach.call(document.querySelectorAll("[data-bg]"), function(block) {
     var bg_src = block.dataset.bg;
     if (block.clientWidth <= 576) {
@@ -163,11 +164,13 @@ export function responsiveBackgrounds() {
           "linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), " +
           bg_src;
       }
+        block.removeAttribute('data-darken');
     }
-    block.setAttribute("style", "background:" + bg_src +" no-repeat center center fixed;background-size:cover");
+        block.removeAttribute('data-bg');
+        block.setAttribute("style", "background:" + bg_src +" no-repeat center center fixed;background-size:cover");
+
   });
 }
-
 /*
  * idea borrowed from https://codepen.io/JacobLett/pen/xqpEYE
  */
