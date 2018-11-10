@@ -94,9 +94,11 @@
 .mcard {
     @extend .card;
     @extend .border-light;
-    @extend .card-plain;
-    margin-bottom: 50px;
+    @extend .rounded;
+    @extend .mb-5;
+    @extend .shadow
 }
+
 .shadow-color {
     transform: scale(.94);
     top: 14px;

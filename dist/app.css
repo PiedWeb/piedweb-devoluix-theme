@@ -3901,7 +3901,7 @@ button.bg-dark:focus {
 .border-white {
   border-color: #fff !important; }
 
-.rounded {
+.rounded, .mcard {
   border-radius: 0.25rem !important; }
 
 .rounded-top {
@@ -4770,7 +4770,7 @@ button.bg-dark:focus {
 .shadow-sm {
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important; }
 
-.shadow {
+.shadow, .mcard {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important; }
 
 .shadow-lg {
@@ -4921,7 +4921,7 @@ button.bg-dark:focus {
 .mx-5 {
   margin-right: 3rem !important; }
 
-.mb-5,
+.mb-5, .mcard,
 .my-5 {
   margin-bottom: 3rem !important; }
 
@@ -6304,10 +6304,10 @@ body {
 .section-gap {
   padding: 100px 0; }
 
-.section-light, .faq-block {
+.section-light {
   background-color: #f8f9fa; }
 
-.card-plain, .mcard {
+.card-plain {
   background: transparent;
   box-shadow: none; }
 
@@ -6336,9 +6336,6 @@ body {
   font-weight: normal;
   color: #fff;
   opacity: 1; }
-
-.mcard {
-  margin-bottom: 50px; }
 
 .shadow-color {
   transform: scale(0.94);

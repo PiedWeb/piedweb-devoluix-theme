@@ -164,7 +164,7 @@ export function responsiveBackgrounds() {
           bg_src;
       }
     }
-    block.setAttribute("style", "background:" + bg_src +";background-size:cover");
+    block.setAttribute("style", "background:" + bg_src +" no-repeat center center fixed;background-size:cover");
   });
 }
 
