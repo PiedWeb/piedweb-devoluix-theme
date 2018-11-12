@@ -37,6 +37,26 @@ export function navbarOnScroll() {
   }
 }
 
+export function jsLinks() {
+    var test = []
+    if (typeof test.push === "function") { // to avoid gooogle bot execute
+        [].forEach.call(document.querySelectorAll("[data-href]"), function(element) {
+            let link = document.createElement("a");
+            let href = element.getAttribute("data-href");
+            element.removeAttribute("data-href");
+            for (var i = 0, n = element.attributes.length; i < n; i++) {
+              link.setAttribute(
+                element.attributes[i].nodeName,
+                element.attributes[i].nodeValue
+              );
+            }
+            link.textContent = element.textContent;
+            link.setAttribute("href", href);
+            element.outerHTML = link.outerHTML;
+          });
+    }
+}
+
 /*
  * Make a div clickable via a <a> contained
  */

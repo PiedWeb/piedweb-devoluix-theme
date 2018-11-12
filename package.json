@@ -1,12 +1,12 @@
 {
   "name": "piedweb-devoluix-theme",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Bootstrap 4 theme UltraLight (without jQuery)",
   "author": "Robin D. <contact@piedweb.com>",
   "license": "MIT",
   "scripts": {
     "build": "webpack",
-    "dev": "webpack-dev-server --inline --hot",
+    "dev": "m  --inline --hot",
     "prettier": "prettier ./src/{js,scss}/*.{js,scss} --write"
   },
   "repository": {

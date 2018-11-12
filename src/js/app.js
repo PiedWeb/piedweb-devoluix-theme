@@ -14,7 +14,8 @@ import {
   responsiveBackgrounds,
   imgLazyLoad,
   readableEmail,
-  bsVideo
+  bsVideo,
+  jsLinks
 } from "./helpers.js";
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -68,6 +69,8 @@ document.addEventListener("DOMContentLoaded", function() {
   responsiveBackgrounds();
 
   navbarOnScroll();
+
+  jsLinks();
 
   //register('/service-worker.js');
 
