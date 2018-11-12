@@ -24,21 +24,25 @@ export function imgLazyLoad() {
 }
 
 export function navbarOnScroll() {
-    window.onscroll = function(){
-        if (pageYOffset > 50) {
-            if (document.querySelector('.nostick') === null) {
-             document.querySelector('.navbar').className += ' nostick';
-            }
-        } else {
-            document.querySelector('.navbar').classList.remove('nostick');
+  if (document.querySelector(".navbar") !== null) {
+    window.onscroll = function() {
+      if (pageYOffset > 50) {
+        if (document.querySelector(".nostick") === null) {
+          document.querySelector(".navbar").className += " nostick";
         }
+      } else {
+        document.querySelector(".navbar").classList.remove("nostick");
+      }
     };
+  }
 }
 
 /*
  * Make a div clickable via a <a> contained
  */
 export function clickable(current) {
+  if (!current.querySelector("a")) return false;
+
   var link = current.querySelectorAll("a")[0];
 
   if (
@@ -49,7 +53,7 @@ export function clickable(current) {
     smoothScroll(link);
     return false;
   }
-  window.location = link.getAttribute("href");
+  window.location = link.getAttribute("href") === null ? '' : link.getAttribute("href");
   return false;
 }
 
@@ -57,21 +61,24 @@ export function clickable(current) {
  * Apply window height to a (selector)
  */
 export function fullHeight(selector) {
-  document.querySelector(selector).style.height = window.innerHeight + "px";
+  if (document.querySelector(selector) !== null)
+    document.querySelector(selector).style.height = window.innerHeight + "px";
 }
 
 export function wideImgCentered(selector_img) {
-  let img = document.querySelector(selector_img);
-  if (img === null) return;
-  let container = img.parentNode;
-  if (img.height > container.clientHeight) {
-    let divide = img.height / container.clientHeight;
-    console.log(divide);
-    if (divide >= 4) {
-      img.style.transform = "translate(0%, -50%)";
-      console.log(document.querySelector(selector_img).style.transform);
-    } else if (divide >= 2) {
-      img.style.transform = "translate(0, -25%)";
+  if (document.querySelector(selector_img) !== null) {
+    let img = document.querySelector(selector_img);
+    if (img === null) return;
+    let container = img.parentNode;
+    if (img.height > container.clientHeight) {
+      let divide = img.height / container.clientHeight;
+      console.log(divide);
+      if (divide >= 4) {
+        img.style.transform = "translate(0%, -50%)";
+        console.log(document.querySelector(selector_img).style.transform);
+      } else if (divide >= 2) {
+        img.style.transform = "translate(0, -25%)";
+      }
     }
   }
 }
@@ -133,22 +140,24 @@ export function smoothScrollHash() {
 
 /*
  * Manage image responsively
+ * Replace /default/ in the url per /(xs|md|sm|...)/
+ * Don't test if image exist !
  */
 export function responsiveBackgrounds() {
   var id = null;
   [].forEach.call(document.querySelectorAll("[data-bg]"), function(block) {
     var bg_src = block.dataset.bg;
     if (block.clientWidth <= 576) {
-      bg_src = "url('" + bg_src.replace("-size", "-xs") + "')";
+      bg_src = "url('" + bg_src.replace("/default/", "/xs/") + "')";
     } else if (block.clientWidth <= 768) {
-      bg_src = "url('" + bg_src.replace("-size", "-sm") + "')";
+      bg_src = "url('" + bg_src.replace("/default/", "/sm/") + "')";
     } else if (block.clientWidth <= 992) {
-      bg_src = "url('" + bg_src.replace("-size", "-md") + "')";
+      bg_src = "url('" + bg_src.replace("/default/", "/md/") + "')";
     } else if (block.clientWidth <= 1200) {
-      bg_src = "url('" + bg_src.replace("-size", "-lg") + "')";
+      bg_src = "url('" + bg_src.replace("/default/", "/lg/") + "')";
     } else {
       // 1200+
-      bg_src = "url('" + bg_src.replace("-size", "-xl") + "')";
+      bg_src = "url('" + bg_src.replace("/default/", "/xl/") + "')";
     }
 
     if (block.getAttribute("data-darken")) {
@@ -164,11 +173,15 @@ export function responsiveBackgrounds() {
           "linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), " +
           bg_src;
       }
-        block.removeAttribute('data-darken');
+      block.removeAttribute("data-darken");
     }
-        block.removeAttribute('data-bg');
-        block.setAttribute("style", "background:" + bg_src +" no-repeat center center fixed;background-size:cover");
-
+    block.removeAttribute("data-bg");
+    block.setAttribute(
+      "style",
+      "background:" +
+        bg_src +
+        " no-repeat center center fixed;background-size:cover"
+    );
   });
 }
 /*
@@ -177,6 +190,8 @@ export function responsiveBackgrounds() {
 export function bsVideo() {
   var $videoSrc;
   let modal = document.getElementById("video-modal");
+
+  if (modal === null) return false;
 
   document.querySelectorAll(".play-btn").forEach(function(item) {
     item.addEventListener("click", function() {

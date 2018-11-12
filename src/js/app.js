@@ -1,7 +1,7 @@
 import BootstrapCookieConsent from "bootstrap-cookie-consent";
 import { tns } from "~/node_modules/tiny-slider/src/tiny-slider";
 import baguetteBox from "baguettebox.js";
-var bsn = require('bootstrap.native/dist/bootstrap-native-v4');
+var bsn = require("bootstrap.native/dist/bootstrap-native-v4");
 
 //import { register } from 'register-service-worker'
 
@@ -20,7 +20,7 @@ import {
 document.addEventListener("DOMContentLoaded", function() {
   "use strict";
 
-  if (!('fetch' in window)) {
+  if (!("fetch" in window)) {
     fullHeight(".fullscreen");
   }
   wideImgCentered(".ic");
@@ -31,18 +31,19 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   });
 
-  tns({
-    container: ".tns",
-    controls: false,
-    nav: false,
-    autoWidth: true,
-    loop: false,
-    mouseDrag: true,
-    slideBy: "page",
-    swipeAngle: false,
-    items: 1
-  });
-
+  if (document.querySelector(".tns") !== null) {
+    tns({
+      container: ".tns",
+      controls: false,
+      nav: false,
+      autoWidth: true,
+      loop: false,
+      mouseDrag: true,
+      slideBy: "page",
+      swipeAngle: false,
+      items: 1
+    });
+  }
   bsVideo();
 
   /**
@@ -65,7 +66,6 @@ document.addEventListener("DOMContentLoaded", function() {
   readableEmail("contact-email");
 
   responsiveBackgrounds();
-
 
   navbarOnScroll();
 
