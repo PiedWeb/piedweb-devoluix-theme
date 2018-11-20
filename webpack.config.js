@@ -139,5 +139,5 @@ var prodConfig = Object.assign({}, config, {
 });
 
 module.exports = [
-    devConfig, prodConfig
+    devConfig//, prodConfig
 ];

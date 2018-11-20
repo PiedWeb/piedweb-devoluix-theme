@@ -18,7 +18,7 @@ var bsn = require("bootstrap.native/dist/bootstrap-native-v4");
 
 import { tns } from "~/node_modules/tiny-slider/src/tiny-slider";
 
-import { watchVideoInBootstrapModal } from "./helpers.js";
+import { watchVideoInBootstrapModal, activePanelInACorner } from "./helpers.js";
 
 import {
   convertImgLinkToResponsiveImgLink,
@@ -69,6 +69,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
   watchVideoInBootstrapModal();
+  activePanelInACorner();
   addAClassOnScroll(".navbar", "nostick", 50);
 });
 
@@ -76,7 +77,6 @@ function applyOnDomLoaded() {
   allClickable(".clickable");
   imgLazyLoad();
   readableEmail("#contact-email");
-  console.log(rot13ToText("pbagnpg@cvrqjro.pbz"));
   backgroundLazyLoad();
   convertInLinks();
   applySmoothScroll();

@@ -82,3 +82,25 @@ export function flowtype(element, options) {
   };
   changes(element);
 }
+
+/**
+ * Change theme color
+ */
+export function changeThemeColor(color) {
+    var metaThemeColor = document.querySelector("meta[name=theme-color]");
+    if (metaThemeColor === null) return;
+    metaThemeColor.setAttribute("content", color);
+}
+
+/**
+ * Add panelInaCorner accessible via a button
+ *
+ * @param {string} selector     for the button
+ */
+export function activePanelInACorner(selector = '.contact-icon') {
+    document.querySelector(selector).addEventListener('click', (event) => {
+        var icon = document.querySelector(selector);
+        icon.classList.toggle('open');
+        document.getElementById(icon.getAttribute('data-id')).classList.toggle('open');
+    });
+}

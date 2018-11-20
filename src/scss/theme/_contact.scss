@@ -11,3 +11,84 @@
 		margin-top: 0px;
 	}
 }
+
+// <div class=contact-evw>
+//      <span class=contact-icon data-id=panel><i class="fa fa-mail-o"></i></span>
+//      <div class=contact-panel id=panel>
+//          <span data-img=/face.png class="rounded text-center"></span>
+//          <p>L'équipe répond habituellement en quelques heures<br>email@domain.tld.com</p>
+//      </div>
+// </div>
+.contact-evw {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 60px;
+    height: 60px;
+    z-index: 9999;
+
+    .contact-icon {
+        cursor: pointer;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        display:block;
+        background-color: $primary;
+        font-size:25px;
+        line-height: 60px;
+        text-align:center;
+        color: $white;
+        &:hover, &.open {
+            background-color: $dark-primary;
+        }
+    }
+
+    .contact-panel {
+        &:not(.open) {
+            display:none;
+        }
+        width: 90vw;
+        max-width: 350px;
+        position: fixed;
+        bottom: 80px;
+        right: 10px;
+        border-radius: 15px;
+        padding: 0px 0px 20px;
+        animation: fadein 1s;
+
+        .label {
+            padding: 5px 10px;
+            font-size: 12px;
+        }
+        p {
+            text-align:center;
+            padding: 20px 10px 20px;
+            background-color: $white;
+            color: $headings-color;
+            box-shadow: inset 0 0 2px $headings-color;
+            font-size: 16px;
+        }
+
+        img {
+            border: 2px solid $white;
+            border-radius: 50% !important;
+            width: 80px;
+            height: 80px;
+            margin: 10px 0;
+        }
+
+        color: $white;
+        a {
+            color: $white;
+            text-decoration: underline
+         }
+    }
+}
+        @include bg-gradient-variant('.contact-panel', $primary);
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+
