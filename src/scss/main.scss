@@ -17,18 +17,13 @@
 @import "theme/slider";
 
 @import "theme/fontello";
-/*
-@import '../fonts/fontawesome/scss/regular';
-@import '../fonts/fontawesome/scss/brands';
-@import '../fonts/fontawesome/scss/solid';
-@import '../fonts/fontawesome/scss/fontawesome';
-*/
 
 //
 // =Global
 // --------------------------------------------------
+@import "~piedweb-tyrol-free-bootstrap-4-theme/src/scss/theme/init";
 @import "theme/init";
-@import "theme/spacer";
+@import "~piedweb-tyrol-free-bootstrap-4-theme/src/scss/theme/spacer";
 @import "theme/switches";
 
 //
@@ -43,4 +38,5 @@
 @import "theme/hero-video";
 @import "theme/nice-select";
 @import "theme/tunnel";
-@import "theme/cookie-rgpd";
+@import "~piedweb-tyrol-free-bootstrap-4-theme/src/scss/theme/cookie-rgpd";
+@import "theme/mcard";

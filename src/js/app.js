@@ -1,37 +1,60 @@
+/**
+ * Feel Free to copy this file in yourt app
+ * /!\ You just need to change './helper.js' (line 21) to '~/node_modules/piedweb-devoluix-theme/src/js/helpers.js'
+ *
+ * Advice: to maximize the speed rendering, you should split this file in two and keep in the first one only the essentiel to render block on top of float lign
+ */
+
+/* Import CSS */
+require("../scss/main.scss");
+import "typeface-poppins";
+
+/* Import JS Lib */
 import BootstrapCookieConsent from "bootstrap-cookie-consent";
-import { tns } from "~/node_modules/tiny-slider/src/tiny-slider";
+
 import baguetteBox from "baguettebox.js";
+
 var bsn = require("bootstrap.native/dist/bootstrap-native-v4");
 
-//import { register } from 'register-service-worker'
+import { tns } from "~/node_modules/tiny-slider/src/tiny-slider";
+
+import { watchVideoInBootstrapModal } from "./helpers.js";
 
 import {
-  fullHeight,
-  navbarOnScroll,
-  wideImgCentered,
-  smoothScrollHash,
-  clickable,
-  responsiveBackgrounds,
+  convertImgLinkToResponsiveImgLink,
+  responsiveImage
+} from "~/node_modules/piedweb-tyrol-free-bootstrap-4-theme/src/js/helpers-pwcms.js";
+
+import {
   imgLazyLoad,
+  backgroundLazyLoad,
+  convertInLinks,
+  convertInLinksFromRot13,
+  clickable,
+  resizeWithScreenHeight,
+  wideImgCentered,
+  smoothScroll,
+  rot13ToText,
   readableEmail,
-  bsVideo,
-  jsLinks
-} from "./helpers.js";
+  applySmoothScroll,
+  addAClassOnScroll,
+  allClickable
+} from "~/node_modules/piedweb-tyrol-free-bootstrap-4-theme/src/js/helpers.js";
 
+/* Action */
 document.addEventListener("DOMContentLoaded", function() {
-  "use strict";
-
-  if (!("fetch" in window)) {
-    fullHeight(".fullscreen");
-  }
-  wideImgCentered(".ic");
-
-  baguetteBox.run(".mimg", {
-    captions: function(element) {
-      return element.getElementsByTagName("img")[0].alt;
-    }
+  applyOnDomLoaded();
+  /**/
+  new BootstrapCookieConsent({
+    services: ["StatistiquesAnonymes", "YouTube"],
+    services_descr: {
+      StatistiquesAnonymes:
+        "Nous permet d'améliorer le site en fonction de son utilisation",
+      YouTube: "Affiche les vidéos du service youtube.com"
+    },
+    method: "bsn"
   });
-
+  /**/
   if (document.querySelector(".tns") !== null) {
     tns({
       container: ".tns",
@@ -45,37 +68,22 @@ document.addEventListener("DOMContentLoaded", function() {
       items: 1
     });
   }
-  bsVideo();
-
-  /**
-    new BootstrapCookieConsent({
-        services: ['StatistiquesAnonymes', 'YouTube'],
-        services_descr: {
-            'StatistiquesAnonymes': 'Nous permet d\'améliorer le site en fonction de son utilisation',
-            'YouTube': 'Affiche les vidéos du service youtube.com'
-        },
-        method: 'bsn'
-    });
-/**/
-  document.querySelectorAll(".clickable").forEach(function(item) {
-    item.addEventListener("click", function() {
-      clickable(item);
-    });
-  });
-  smoothScrollHash();
-  imgLazyLoad();
-  readableEmail("contact-email");
-
-  responsiveBackgrounds();
-
-  navbarOnScroll();
-
-  jsLinks();
-
-  //register('/service-worker.js');
-
-  // App Function
-  //responsiveBackgrounds();
-  //ajaxForm();
-  //loadFooter();
+  watchVideoInBootstrapModal();
+  addAClassOnScroll(".navbar", "nostick", 50);
 });
+
+function applyOnDomLoaded() {
+  allClickable(".clickable");
+  imgLazyLoad();
+  readableEmail("#contact-email");
+  console.log(rot13ToText("pbagnpg@cvrqjro.pbz"));
+  backgroundLazyLoad();
+  convertInLinks();
+  applySmoothScroll();
+  baguetteBox.run(".mimg", {
+    captions: function(element) {
+      return element.getElementsByTagName("img")[0].alt;
+    }
+  });
+  wideImgCentered(".ic");
+}

@@ -12,7 +12,7 @@ const WebpackPwaManifest = require('webpack-pwa-manifest')
 const config = {
     mode: "development",
     entry: [
-        './src/js/main.js',
+        './src/js/app.js',
     ],
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -27,7 +27,8 @@ const config = {
                     {
                         loader: 'css-loader', // translates CSS into CommonJS modules
                         options: {
-                            sourceMap: true
+                            sourceMap: true,
+                            minimize: true
                         }
                     },
                     {
@@ -52,7 +53,7 @@ const config = {
             },
             {
                 test: /\.(png|jpg|gif|svg|ttf|woff2|woff|eot)$/,
-                use: 'url-loader'
+                use: 'file-loader'
             },
             {
                 test: /.html$/,
@@ -136,5 +137,5 @@ var prodConfig = Object.assign({}, config, {
 });
 
 module.exports = [
-    devConfig//, prodConfig
+    devConfig, prodConfig
 ];

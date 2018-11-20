@@ -1,16 +1,11 @@
-# [Pied Web](https://piedweb.com) : Bootstrap 4 theme without jQuery
-
-Devoluix is a responsive BS4 theme built as light as possible.
 
 <p align="center"><a href="https://piedweb.com">
 <img src="https://raw.githubusercontent.com/PiedWeb/piedweb-devoluix-theme/master/src/img/logo_title.png" width="200" height="200" alt="theme devoluix bootstrap 4" />
 </a></p>
 
-## Table of contents
-* [Licence](#licence)
-* [Basic Usage](#basic-usage)
-    * [npm](https://www.npmjs.com/package/piedweb-devoluix-theme)
-* [Contributors](#contributors)
+# Bootstrap 4 theme without jQuery
+
+Devoluix is a responsive BS4 theme built as light as possible.
 
 ## Licence
 
@@ -18,6 +13,8 @@ If you do not own a commercial license, the usage of this software shall be gove
 
 
 ## Basic Usage
+
+Quick Install via [npm](https://www.npmjs.com/package/piedweb-devoluix-theme).
 
 ```bash
 # Install
@@ -33,10 +30,14 @@ npm run dev
 Variables
 `src/scss/theme/_variables.scss`
 
-See
-`src/scss/main.scss`
-`src/js/main.js`
+Loot at those files to build your own :
+```
+# Index of SASS files
+./src/scss/main.scss
 
+# JS
+./src/js/app.js`
+```
 
 ## Contributors
 

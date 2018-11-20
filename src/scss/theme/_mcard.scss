@@ -1,0 +1,34 @@
+
+.mcard {
+    @extend .card;
+    @extend .border-light;
+    @extend .rounded;
+    @extend .mb-5;
+    @extend .shadow;
+}
+
+.card-plain {
+    background: transparent;
+    box-shadow: none;
+}
+
+.shadow-color {
+    transform: scale(.94);
+    top: 14px;
+    filter: blur(10px);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    z-index: -1;
+}
+
+.card-header-img {
+    position: relative;
+    padding: 0;
+    z-index: 1;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: -30px;
+    border-radius: 6px;
+}
