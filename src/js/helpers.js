@@ -40,3 +40,45 @@ export function watchVideoInBootstrapModal(
     });
   }
 }
+
+/**
+ * Idea from flowtype.js
+ * http://jsfiddle.net/xcLJ4/70/
+ *
+ * @example
+ * flowtype( document.getElementById('demo-article'), {fontRatio:16} );
+ */
+export function flowtype(element, options) {
+  // Establish default settings/variables
+  // ====================================
+  options.maximum = options.maximum || 9999;
+  options.minimum = options.minimum || 1;
+  options.maxFont = options.maxFont || 9999;
+  options.minFont = options.minFont || 16;
+  options.fontRatio = options.fontRatio || 35;
+  options.lineRatio = options.lineRatio || 1.45;
+
+  // Do the magic math
+  // =================
+  changes = function(el) {
+    var elw = el.clientWidth,
+      width =
+        elw > options.maximum
+          ? options.maximum
+          : elw < options.minimum
+          ? options.minimum
+          : elw,
+      fontBase = width / options.fontRatio,
+      fontSize =
+        fontBase > options.maxFont
+          ? options.maxFont
+          : fontBase < options.minFont
+          ? options.minFont
+          : fontBase;
+
+    el.style.fontSize = fontSize + "px";
+    el.style.lineHeight = fontSize * options.lineRatio + "px";
+    console.log("well-done");
+  };
+  changes(element);
+}

@@ -1,9 +1,0 @@
-{
-  "name": "My Pied Web App",
-  "short_name": "MyPWA",
-  "orientation": "portrait",
-  "display": "standalone",
-  "start_url": ".",
-  "description": "My awesome Pied Web App!",
-  "background_color": "#1fa67a"
-}

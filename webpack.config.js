@@ -8,6 +8,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 const WebpackPwaManifest = require('webpack-pwa-manifest')
+const CssoWebpackPlugin = require('csso-webpack-plugin').default;
 
 const config = {
     mode: "development",
@@ -28,7 +29,7 @@ const config = {
                         loader: 'css-loader', // translates CSS into CommonJS modules
                         options: {
                             sourceMap: true,
-                            minimize: true
+                            minimize: true,
                         }
                     },
                     {
@@ -77,6 +78,7 @@ const config = {
         ]
     },
     plugins: [
+        new CssoWebpackPlugin({ pluginOutputPostfix: 'min' }),
         new CleanWebpackPlugin(['dist']),
         //new FaviconsWebpackPlugin('./src/img/logo_title.png'),
         new CopyWebpackPlugin([{from:'./src/demo/html/img', to: 'img'}]),

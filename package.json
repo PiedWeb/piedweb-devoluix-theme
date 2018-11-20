@@ -1,6 +1,6 @@
 {
   "name": "piedweb-devoluix-theme",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Bootstrap 4 theme UltraLight (without jQuery)",
   "author": "Robin D. <contact@piedweb.com>",
   "license": "Apache-2.0",
@@ -43,6 +43,7 @@
     "clean-webpack-plugin": "^0.1.19",
     "copy-webpack-plugin": "^4.6.0",
     "css-loader": "^0.28.11",
+    "csso-webpack-plugin": "^1.0.0-beta.12",
     "favicons-webpack-plugin": "^0.0.9",
     "file-loader": "^2.0.0",
     "html-loader": "^0.5.5",
