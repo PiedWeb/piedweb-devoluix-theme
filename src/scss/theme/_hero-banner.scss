@@ -7,11 +7,11 @@
 }
 
 .hero-banner {
-    &, h1, a:not(.btn-header-light):not(:hover):not(.btn-header) {
+    &, h1, a:not(.btn):not(:hover) {
         color: white;
     }
 
-    #cover-banner {
+    .cover-banner {
         background-size: cover;
         background: $primary linear-gradient(180deg, mix($body-color, $primary, 15%), $primary) repeat-x;
     }
@@ -54,19 +54,6 @@
 	@media(max-width: 800px) {
 		padding-bottom:40px;
 	}
-
-    .btn-header {
-        @extend .letter-spacing;
-        @extend .btn-light;
-        @extend .font-weight-bold;
-
-    }
-
-    .btn-header-light {
-        @extend .letter-spacing;
-        @extend .btn-outline-light;
-        @extend .font-weight-bold;
-    }
 }
 
 .hero-half {

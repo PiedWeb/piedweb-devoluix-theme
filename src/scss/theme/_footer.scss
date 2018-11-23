@@ -25,7 +25,7 @@
     .footer-social{
         a{
             padding-right:25px;
-            @include transition();
+
             &:hover{
                 i{
                     @extend .p1-gradient-color;
@@ -34,7 +34,6 @@
         }
         i{
             color:#cccccc;
-            @include transition();
 
         }
         @include media-breakpoint-down(md) {

@@ -1,6 +1,6 @@
 $primary-font	: 'Poppins', sans-serif;
 
-// Use: https://www.materialpalette.com/brown/deep-orange
+
 $primary	      : #1fa67a;
 $light-primary    : #e8f5e9;//#DCEDC8;
 $dark-primary     : #1a8d67;//#689F38;
@@ -16,7 +16,11 @@ $white			: #fff;
 }
 $gradientDtB: linear-gradient($primary, $primary, darken($primary, 10%));
 $gradientBtD: linear-gradient($primary, $primary, darken($primary, 10%));
-// Bootstrap Variables
+
+
+//
+// =Bootsrap customization
+// --------------------------------------------------
 
 //$success:       $green !default;
 //$info:          $cyan !default;
@@ -36,8 +40,8 @@ $btn-padding-x: 40px;
 $btn-line-height: 40px;
 $btn-border-radius: 20px;
 $btn-font-size: .8em; // Marchera à la prochaine MàJ de bootstrap en attendant :
-.btn {font-size: .8em !important; color:#fff;}
-//.btn-primary, .btn-secondary, .btn-light { color: #fff !important }
+$btn-font-weight: 700;
+.btn {font-size: .8em !important;}
 
 //$headings-margin-bottom: 0;
 // $headings-line-height: 1.2em;
@@ -46,4 +50,3 @@ $headings-color	: #222222;
 
 // http://typecast.com/images/uploads/modernscale.css
 
-// End boostrap variable
