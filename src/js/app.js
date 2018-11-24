@@ -21,11 +21,6 @@ import { tns } from "~/node_modules/tiny-slider/src/tiny-slider";
 import { watchVideoInBootstrapModal, activePanelInACorner } from "./helpers.js";
 
 import {
-  convertImgLinkToResponsiveImgLink,
-  responsiveImage
-} from "~/node_modules/piedweb-tyrol-free-bootstrap-4-theme/src/js/helpers-pwcms.js";
-
-import {
   imgLazyLoad,
   backgroundLazyLoad,
   convertInLinks,
