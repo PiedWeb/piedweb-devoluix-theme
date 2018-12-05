@@ -90,6 +90,10 @@ const config = {
             template: './src/demo/html/index.html'
         }),
         new HtmlWebpackPlugin({
+            filename: 'invoice.html',
+            template: './src/demo/html/invoice.html'
+        }),
+        new HtmlWebpackPlugin({
             filename: 'elements.html',
             template: './src/demo/html/elements.html'
         }),
