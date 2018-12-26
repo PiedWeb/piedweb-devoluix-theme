@@ -1,22 +1,15 @@
-$primary-font	: 'Poppins', sans-serif;
+$font-family-base: 'Poppins', sans-serif !default;
 
 
-$primary	      : #1fa67a;
-$light-primary    : #e8f5e9;//#DCEDC8;
-$dark-primary     : #1a8d67;//#689F38;
-$secondary        : #FFC107;
+$primary          : #1fa67a !default;
+$light-primary    : #e8f5e9 !default;
+$dark-primary     : #1a8d67 !default;
+$secondary        : #FFC107 !default;
+$white            : #fff    !default;
 
-$footer-background-color : #222;
-$slider-img-height: 300px;
+$footer-background-color : #222 !default;
 
-$white			: #fff;
-
-@mixin transition($color) {
-
-}
-$gradientDtB: linear-gradient($primary, $primary, darken($primary, 10%));
-$gradientBtD: linear-gradient($primary, $primary, darken($primary, 10%));
-
+$slider-img-height: 300px !default;
 
 //
 // =Bootsrap customization
@@ -30,23 +23,17 @@ $gradientBtD: linear-gradient($primary, $primary, darken($primary, 10%));
 //$dark:          $gray-800 !default;
 
 
-$font-family-base: $primary-font;
-$body-color: #777777;
-$font-weight-base: 300;
-$line-height-base: 1.625;
+$body-color: #777777 !default;
+$font-weight-base: 300 !default;
+$line-height-base: 1.625 !default;
 
-$btn-padding-y: 0;
-$btn-padding-x: 40px;
-$btn-line-height: 40px;
-$btn-border-radius: 20px;
-$btn-font-size: .8em; // Marchera à la prochaine MàJ de bootstrap en attendant :
-$btn-font-weight: 700;
-.btn {font-size: .8em !important;}
+$btn-padding-y: 0 !default;
+$btn-padding-x: 40px !default;
+$btn-line-height: 40px !default;
+$btn-border-radius: 20px !default;
+$btn-font-size: .8em !default;
+$btn-font-weight: 700 !default;
 
-//$headings-margin-bottom: 0;
-// $headings-line-height: 1.2em;
-// $headings-font-weight: 600;
-$headings-color	: #222222;
+$headings-color	: #222222 !default;
 
-// http://typecast.com/images/uploads/modernscale.css
 
