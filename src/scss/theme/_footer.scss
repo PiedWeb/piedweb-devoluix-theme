@@ -1,18 +1,20 @@
 .extra-footer {
+    color: color-yiq($footer-background-color);
     padding: 20px;
     background-color: $footer-background-color;
     a {
-        color: $body-color;
+        color: color-yiq($footer-background-color);
     }
 }
 
 @include bg-gradient-variant('.footer-block', $footer-background-color);
 
-.footer-block{
+.footer-block {
+    color: color-yiq($footer-background-color);
     padding-top:100px;
     background-color: $footer-background-color;
     h6, .h6{
-        color:#fff;
+        color: color-yiq($footer-background-color);
         margin-bottom:25px;
         font-size:18px;
         font-weight:600;

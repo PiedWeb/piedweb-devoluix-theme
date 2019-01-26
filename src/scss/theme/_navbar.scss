@@ -1,20 +1,20 @@
 .navbar{
-	//background-color: rgba(0,0,0,.5);//background-color:transparent;
-	@include media-breakpoint-down(md) {
-		 background-color: rgba(0,0,0,.5);
-	}
+    background-color: $navbar-bg;
+    @include media-breakpoint-down(md) {
+         background-color: $navbar-bg-nostick;
+    }
 }
 
 .nostick {
-		 background-color: rgba(0,0,0,.5);
+        background-color: $navbar-bg-nostick;
 }
 
 @include media-breakpoint-down(md){
-	.navbar-nav {
-	    height: auto;
-	    max-height: 400px;
-	    overflow-x: hidden;
-	}
+    .navbar-nav {
+        height: auto;
+        max-height: 400px;
+        overflow-x: hidden;
+    }
 }
 
 .navbar-light .navbar-toggler {
@@ -24,12 +24,12 @@
 
 
 .navbar-nav{
-	a, span {
-		text-transform:uppercase;
-		font-weight:600;
-		color:$white;
-		padding: 0 20px;
-	}
+    a, span {
+        text-transform:uppercase;
+        font-weight:600;
+        color:$white;
+        padding: 0 20px;
+    }
     a:hover, .current, .nav-link.disabled {
          color: rgba(250,250,250, 0.7);
     }
@@ -38,16 +38,16 @@
         padding: 0;
         list-style: none;
     }
-	//@media(max-width:992px){
+    //@media(max-width:992px){
     @include media-breakpoint-down(md){
-		margin-top:10px;
-		a, span{
-			padding:0;
-		}
-		li{
-			padding:15px 0;
-		}
-	}
+        margin-top:10px;
+        a, span{
+            padding:0;
+        }
+        li{
+            padding:15px 0;
+        }
+    }
 }
 
 .navbar-brand {
@@ -62,37 +62,37 @@
 
 //@media(max-width: 1023px) {
 @include media-breakpoint-down(lg) {
-	.nav-sub-item li {
-		a, span {
-			padding-left: 20px;
-		}
-	}
+    .nav-sub-item li {
+        a, span {
+            padding-left: 20px;
+        }
+    }
 }
 
 //@media(min-width: 1024px) {
 @include media-breakpoint-up(lg){
-	.navbar-nav > li + li {
-		border-left: 1px solid rgba(250, 250, 250, 0.5);
-	}
-	.nav-sub-item li {
-		float: left;
-		a, span {
-			font-size: 90%;
-			padding: 5px;
-		}
-		&:first-child {
-			a, span {
-				padding-left: 10px;
-			}
-		}
-		&:last-child {
-			a, span {
-				padding-right: 10px;
-			}
-		}
-		+ li:before {
-			content: "|";
-			color: rgba(250, 250, 250, 0.5);
-		}
-	}
+    .navbar-nav > li + li {
+        border-left: 1px solid rgba(250, 250, 250, 0.5);
+    }
+    .nav-sub-item li {
+        float: left;
+        a, span {
+            font-size: 90%;
+            padding: 5px;
+        }
+        &:first-child {
+            a, span {
+                padding-left: 10px;
+            }
+        }
+        &:last-child {
+            a, span {
+                padding-right: 10px;
+            }
+        }
+        + li:before {
+            content: "|";
+            color: rgba(250, 250, 250, 0.5);
+        }
+    }
 }
