@@ -1,6 +1,6 @@
 {
   "name": "piedweb-devoluix-theme",
-  "version": "1.0.16",
+  "version": "1.0.17",
   "description": "Bootstrap 4 theme UltraLight (without jQuery)",
   "author": "Robin D. <contact@piedweb.com> https://www.robin-d.fr/",
   "license": "Apache-2.0",
@@ -28,7 +28,7 @@
   "dependencies": {
     "piedweb-tyrol-free-bootstrap-4-theme": "^0",
     "tiny-slider": "^2.9.1",
-    "typeface-poppins": "^0.0.54"
+    "typeface-poppins": "^0"
   },
   "devDependencies": {
     "@babel/core": "^7.4.0",
