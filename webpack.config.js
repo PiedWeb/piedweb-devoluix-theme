@@ -28,8 +28,7 @@ const config = {
                     {
                         loader: 'css-loader', // translates CSS into CommonJS modules
                         options: {
-                            sourceMap: true,
-                            minimize: true,
+                            sourceMap: true
                         }
                     },
                     {
@@ -71,7 +70,7 @@ const config = {
                 use: [{
                     loader: 'babel-loader', // transpile to ES5
                     options: {
-                        presets: ['es2015']
+                        presets: ["@babel/preset-env"]
                     }
                 }]
             }
@@ -79,7 +78,7 @@ const config = {
     },
     plugins: [
         new CssoWebpackPlugin({ pluginOutputPostfix: 'min' }),
-        new CleanWebpackPlugin(['dist']),
+        new CleanWebpackPlugin(),
         //new FaviconsWebpackPlugin('./src/img/logo_title.png'),
         new CopyWebpackPlugin([{from:'./src/demo/html/img', to: 'img'}]),
         new MiniCssExtractPlugin({
