@@ -5,6 +5,8 @@
 
 # Bootstrap 4 theme without jQuery
 
+[![dependencies Status](https://david-dm.org/PiedWeb/piedweb-devoluix-theme/status.svg)](https://david-dm.org/PiedWeb/piedweb-devoluix-theme)
+
 Devoluix is a responsive BS4 theme built as light as possible.
 
 ## Licence
