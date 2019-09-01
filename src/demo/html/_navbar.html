@@ -1,12 +1,12 @@
 <header id="navbar">
-    <nav class="fixed-top navbar navbar-expand-lg">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">Pied Web</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="text-white fa fa-list"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto">
+    <nav class="fixed-top navbar navbar-expand-lg w-100">
+            <a class="navbar-brand float-left" href="index.html">Pied Web</a>
+            <label class="hamburger float-right" for=toggler>
+              <span>Menu</span>
+            </label>
+            <input type="checkbox" id="toggler">
+            <div class="navbar-collapse" id="navbarSupportedContent">
+                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item"><a class="nav-link disabled" href="index.html">Accueil</a></li>
                     <li class="nav-item"><a class="nav-link" href="page.html">Page</a>
                         <ul class="nav-sub-item">
@@ -22,6 +22,5 @@
                     </li>
                 </ul>
             </div>
-        </div>
     </nav>
 </header>

@@ -14,14 +14,39 @@ $footer-block-padding-top: 40px !default;
 $extra-footer-color-a       : darken($footer-background-color, 40%);
 $extra-footer-color         : darken($footer-background-color, 40%);
 
-$navbar-bg: transparent !default;
-$navbar-bg-nostick: rgba(0,0,0,.5) !default;
+$navbar-bg: rgba(0,0,0,.5) !default;
+$navbar-bg-stick: transparent !default;
 
 $slider-img-height: 300px !default;
 
 $logo: url('../img/logo.png') !default;
 $logo-width: 150px !default;
 $logo-height: 50px !default;
+$navbar-height: $logo-height + 16px !default;
+$navbar-expand: 992px !default; // lg
+$navbar-padding-y:                  8px !default;
+$navbar-padding-x:                  15px !default;
+
+
+$section-gap: 100px 0 !default;
+
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1320px
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 720px, //960px,
+  xl: 720px, //1140px,
+  xxl: 720px //1320px
+);
 
 //
 // =Bootsrap customization
@@ -48,4 +73,4 @@ $btn-font-weight: 700 !default;
 
 $headings-color	: #222222 !default;
 
-
+$grid-gutter-width: 24px !default;

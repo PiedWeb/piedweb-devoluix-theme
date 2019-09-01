@@ -40,3 +40,12 @@
 @import "theme/tunnel";
 @import "~piedweb-tyrol-free-bootstrap-4-theme/src/scss/theme/cookie-rgpd";
 @import "theme/mcard";
+@import "~piedweb-tyrol-free-bootstrap-4-theme/src/scss/theme/hamburger";
+@import "~piedweb-tyrol-free-bootstrap-4-theme/src/scss/theme/masonry";
+@import "~piedweb-tyrol-free-bootstrap-4-theme/src/scss/theme/gallery";
+
+.container-xxl {
+    max-width: 1320px;
+    margin-left: auto;
+    margin-right: auto;
+}

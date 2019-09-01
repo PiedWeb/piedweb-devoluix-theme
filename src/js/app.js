@@ -14,6 +14,8 @@ import BootstrapCookieConsent from "bootstrap-cookie-consent";
 
 import baguetteBox from "baguettebox.js";
 
+import Macy from "macy";
+
 var bsn = require("bootstrap.native/dist/bootstrap-native-v4");
 
 import { tns } from "~/node_modules/tiny-slider/src/tiny-slider";
@@ -81,4 +83,21 @@ function applyOnDomLoaded() {
     }
   });
   wideImgCentered(".ic");
+
+  if (document.querySelector("#flex-masonry") !== null) {
+    var masonry = new Macy({
+      container: '#flex-masonry',
+      columns: 3,
+      margin: {
+        y: 12,
+        x: 12
+      },
+      breakAt: {
+        1200: 2,
+        768: 1
+      },
+    });
+  }
+
+  document.documentElement.className = "js";
 }

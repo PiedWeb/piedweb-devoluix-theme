@@ -1,5 +1,6 @@
 .tns img {
     max-height: $slider-img-height;
+    height: $slider-img-height;
 }
 
 .tns-outer {
@@ -8,4 +9,13 @@
 
 body {
     overflow-x: hidden;
+}
+
+.tns-item {
+    padding: 0;
+}
+
+.js #gallery .tns > div {
+    max-width:100% !important;
+    width: auto !important;
 }

@@ -1,12 +1,12 @@
 .navbar{
-    background-color: $navbar-bg;
+    background-color: $navbar-bg-stick;
     @include media-breakpoint-down(md) {
-         background-color: $navbar-bg-nostick;
+         background-color: $navbar-bg;
     }
 }
 
 .nostick {
-        background-color: $navbar-bg-nostick;
+        background-color: $navbar-bg;
 }
 
 @include media-breakpoint-down(md){
