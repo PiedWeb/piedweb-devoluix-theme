@@ -9,6 +9,8 @@
 
 Devoluix is a responsive BS4 theme built as light as possible.
 
+Try to stay compatible for an usage with or without JAVASCRIPT.
+
 ## Licence
 
 If you do not own a commercial license, the usage of this software shall be governed by the [`Apache License, Version 2.0`](http://www.apache.org/licenses/LICENSE-2.0).
