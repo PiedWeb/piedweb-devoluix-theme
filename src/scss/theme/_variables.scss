@@ -16,7 +16,7 @@ $extra-footer-color         : darken($footer-background-color, 40%);
 
 $navbar-bg: rgba(0,0,0,.5) !default;
 $navbar-bg-stick: transparent !default;
-$hamburger-color: #fff;
+$hamburger-color: #fff !default;
 
 $slider-img-height: 300px !default;
 
@@ -42,10 +42,10 @@ $grid-breakpoints: (
 ) !default;
 
 $container-max-widths: (
-  sm: 1320px, //540px,
-  md: 1320px, //720px,
-  lg: 1320px, //960px,
-  xl: 1320px, //1140px,
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
   xxl:1320px
 ) !default;
 
