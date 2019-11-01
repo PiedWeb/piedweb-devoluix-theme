@@ -1,6 +1,7 @@
 .extra-footer {
     color: $extra-footer-color;
-    padding: 20px;
+    font-size: $extra-footer-font-size;
+    @extend .p-5;
     background-color: $footer-background-color;
     a {
         color: $extra-footer-color-a;

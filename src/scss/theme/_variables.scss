@@ -1,4 +1,4 @@
-$font-family-base: 'Poppins', sans-serif !default;
+$font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;//'Poppins', sans-serif !default;
 
 
 $primary          : #1fa67a !default;
@@ -11,8 +11,9 @@ $footer-background-color : #353535 !default;
 $footer-color            : #fff !default;
 $footer-block-color-a    : #fff !default;
 $footer-block-padding-top: 40px !default;
-$extra-footer-color-a       : darken($footer-background-color, 40%);
-$extra-footer-color         : darken($footer-background-color, 40%);
+$extra-footer-color-a    : #fff; //darken($footer-background-color, 40%);
+$extra-footer-color      : #fff; //darken($footer-background-color, 40%);
+$extra-footer-font-size  : 14px;
 
 $navbar-bg: rgba(0,0,0,.5) !default;
 $navbar-bg-stick: transparent !default;
@@ -48,6 +49,12 @@ $container-max-widths: (
   xl: 1140px,
   xxl:1320px
 ) !default;
+
+// Hero Banner
+// -----------
+
+$fullscreen-min-height: 100vh;
+$halfscreen-min-height: 600vh;
 
 //
 // =Bootsrap customization
