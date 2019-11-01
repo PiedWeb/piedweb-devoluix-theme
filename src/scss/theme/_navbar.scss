@@ -9,24 +9,16 @@
         background-color: $navbar-bg;
 }
 
-@include media-breakpoint-down(md){
-    .navbar-nav {
-        height: auto;
-        max-height: 400px;
-        overflow-x: hidden;
-    }
-}
-
 .navbar-light .navbar-toggler {
     color: rgba(255, 255, 255, 0.5);
     border-color: rgba(255, 255, 255, 0.1);
 }
 
-
 .navbar-nav{
     a, span {
-        text-transform:uppercase;
-        font-weight:600;
+        @if $navbar-item-uppercase {
+            text-transform:uppercase;
+        }
         color:$white;
         padding: 0 20px;
     }
