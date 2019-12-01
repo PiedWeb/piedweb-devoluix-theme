@@ -7,7 +7,6 @@
 
 /* Import CSS */
 require("../scss/main.scss");
-import "typeface-poppins";
 
 /* Import JS Lib */
 import BootstrapCookieConsent from "bootstrap-cookie-consent";
