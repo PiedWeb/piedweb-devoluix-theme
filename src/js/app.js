@@ -19,7 +19,10 @@ var bsn = require("bootstrap.native/dist/bootstrap-native-v4");
 
 import { tns } from "~/node_modules/tiny-slider/src/tiny-slider";
 
-import { watchVideoInBootstrapModal, activePanelInACorner } from "./helpers.js";
+import {
+    watchVideoInBootstrapModal,
+    activePanelInACorner
+} from "./helpers.js";
 
 import {
   imgLazyLoad,

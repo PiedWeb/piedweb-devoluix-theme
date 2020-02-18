@@ -15,20 +15,23 @@ $extra-footer-color-a    : #fff; //darken($footer-background-color, 40%);
 $extra-footer-color      : #fff; //darken($footer-background-color, 40%);
 $extra-footer-font-size  : 14px;
 
-$navbar-bg: rgba(0,0,0,.5) !default;
-$navbar-bg-stick: transparent !default;
-$hamburger-color: #fff !default;
 
 $slider-img-height: 300px !default;
 
 $logo: url('../img/logo.png') !default;
-$logo-width: 150px !default;
+$logo-width: 50px !default;
 $logo-height: 50px !default;
+$logo-background-size: contain !default;
 $navbar-height: $logo-height + 16px !default;
 $navbar-expand: 992px !default; // lg
 $navbar-padding-y:                  8px !default;
 $navbar-padding-x:                  15px !default;
 $navbar-item-uppercase:             false !default;
+$navbar-default-bg: rgba(0,0,0,.8) !default;
+$navbar-bg: $navbar-default-bg !default; // to remove in next release
+$navbar-bg-stick: transparent !default;
+$hamburger-color: #fff !default;
+$navbar-bg-transparent:  rgba(0,0,0,.1) !default;
 
 $container-txt-max-width: 720px !default;
 
@@ -69,8 +72,8 @@ $halfscreen-min-height: 600vh;
 
 
 $body-color: #777777 !default;
-$font-weight-base: 300 !default;
-$line-height-base: 1.625 !default;
+//$font-weight-base: 300 !default;
+//$line-height-base: 1.625 !default;
 
 $btn-padding-y: 0 !default;
 $btn-padding-x: 40px !default;

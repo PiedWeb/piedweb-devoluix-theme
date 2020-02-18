@@ -6,8 +6,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin')
-const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
-const WebpackPwaManifest = require('webpack-pwa-manifest')
+//const WebpackPwaManifest = require('webpack-pwa-manifest')
 const CssoWebpackPlugin = require('csso-webpack-plugin').default;
 
 const config = {
@@ -53,14 +52,20 @@ const config = {
             },
             {
                 test: /\.(png|jpg|gif|svg|ttf|woff2|woff|eot)$/,
-                use: 'file-loader'
+                use: {
+                    loader: 'file-loader',
+                    options: {
+                        esModule: false,
+                    }
+                }
             },
             {
                 test: /.html$/,
                 use: {
                     loader: 'html-loader',
                     options: {
-                        interpolate: true
+                        interpolate: true,
+                        esModule: false,
                     }
                 }
             },
@@ -79,7 +84,6 @@ const config = {
     plugins: [
         new CssoWebpackPlugin({ pluginOutputPostfix: 'min' }),
         new CleanWebpackPlugin(),
-        //new FaviconsWebpackPlugin('./src/img/logo_title.png'),
         new CopyWebpackPlugin([{from:'./src/demo/html/img', to: 'img'}]),
         new MiniCssExtractPlugin({
             filename: "app.css",
@@ -105,6 +109,7 @@ const config = {
             template: './src/demo/html/page.html'
         }),
 
+    /**
         new WebpackPwaManifest({
             name: 'My Pied Web App',
             short_name: 'MyPWA',
@@ -117,7 +122,7 @@ const config = {
                 sizes: [96, 128, 192, 256, 384, 512] // multiple sizes
               }
             ]
-        })
+        }) **/
     ]
 };
 

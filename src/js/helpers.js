@@ -98,9 +98,11 @@ export function changeThemeColor(color) {
  * @param {string} selector     for the button
  */
 export function activePanelInACorner(selector = '.contact-icon') {
-    document.querySelector(selector).addEventListener('click', (event) => {
-        var icon = document.querySelector(selector);
-        icon.classList.toggle('open');
-        document.getElementById(icon.getAttribute('data-id')).classList.toggle('open');
-    });
+    if (document.querySelector(selector)) {
+        document.querySelector(selector).addEventListener('click', (event) => {
+            var icon = document.querySelector(selector);
+            icon.classList.toggle('open');
+            document.getElementById(icon.getAttribute('data-id')).classList.toggle('open');
+        });
+    }
 }

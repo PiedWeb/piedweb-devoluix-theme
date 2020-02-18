@@ -1,12 +1,45 @@
+.thirdscreen {
+    position: relative;
+    @include media-breakpoint-up (md) {
+        min-height: 62vh;
+    }
+    @include media-breakpoint-up (xl) {
+        min-height: 85vh;
+    }
+    @include media-breakpoint-down (md) {
+        padding-bottom: 20px;
+        background-image: none;
+
+    }
+}
+
+@include media-breakpoint-down (sm) {
+    .cover-banner {
+        background-image: none !important;
+    }
+    .hero-banner {
+        background-color: $primary;
+    }
+}
+
 .fullscreen {
     min-height: $fullscreen-min-height;
+
 }
 
 .halfscreen {
     min-height: $halfscreen-min-height;
 }
 
+.noscreen {
+    .banner-content {
+        @extend .pt-5;
+        @extend .pb-4;
+    }
+}
+
 .hero-banner {
+
     &:not(.btn) {
         text-shadow: 0px 1px 16px rgba(0, 0, 0, 0.5), 0px 0px 1px rgba(0, 0, 0, 0.5);
     }
@@ -41,8 +74,16 @@
             }
         }
     }
-    @media(max-width: 800px) {
-        padding-bottom:40px;
+
+
+    @include media-breakpoint-up (md) {
+        .stick-bottom {
+            position: absolute;
+            bottom: 15px;
+            padding-bottom: 3rem;
+            left: 16px;
+            right: 16px;
+        }
     }
 }
 

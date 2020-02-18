@@ -11,10 +11,30 @@
         ${require('./_navbar.html')}
 
 
+    <section class="hero-banner">
+        <div class="cover-banner" style="background:#57AFB7" data-bg="img/photos/3.jpg" data-darken="" data-pos="no-repeat center center">
+            <p class=d-md-none>
+                <img srcset="img/photos/1.jpg 576w, img/photos/2.jpg 992w" src="img/photos/3.jpg" alt="lorem ipsum" loading=lazy" class=img-fluid>
+            </p>
+            <div class="thirdscreen container-txt">
+                <div class="banner-content stick-bottom" id=title><span class="subtitle">Sous-titre</span>
+                    <h1>Titre :  Lorem ipsum dolor sit amet, consectetur adipiscing elit</h1>
+                    <p>Description : Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <a href="#faq" class="btn btn-outline-light">Vos questions</a>
+                    <a href="#reserver" class="btn btn-light letter-spacing">Réserver</a>
+                    <a href="#avis" class="btn btn-outline-light">Photos</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
         <section class="hero-banner">
-            <div class="relative" id="cover-banner" data-bg="img/photos/3.jpg" data-darken="center">
+            <div class="cover-banner" data-bg="img/photos/3.jpg" data-darken="center">
+                    <p class="d-md-none">
+                        <img src="img/photos/3.jpg" class=img-fluid>
+                    </p>
                 <div class="container">
-                    <div class="row fullscreen justify-content-center align-items-center">
+                    <div class="row thirdscreen justify-content-center align-items-center">
                         <div class="col-md-10 col-12">
                             <div class="banner-content">
                                 <span class="subtitle">Sous-titre</span>
@@ -30,6 +50,16 @@
             </div>
         </section>
 
+        <section class="hero-banner">
+            <div class="relative cover-banner">
+                <div class="noscreen container-txt">
+                    <div class="banner-content" id="title">
+                        <h1 class="">Titre :  Lorem ipsum dolor sit amet, consectetur adipiscing elit</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="mb-5 mt-5" id="content">
             <div class="container">
                 <div class="title text-center">
@@ -37,7 +67,7 @@
                 </div>
                 <p>
                     1. Orogenese
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit <a href="#reserver">agence web et seo</a> <a href="https://piedweb.com" class="ninja">agence web et seo</a> esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
                 </p>
                 <br>
                 <p>
@@ -82,6 +112,103 @@
                     <div class="col-6 col-md-3">1 journée</div>
                     <div class="col-6 col-md-3 align-middle">230€</div>
                     <div class="col-6 col-md-3"><a href="#" class="btn btn-primary btn-circle letter-spacing">Réserver</a></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-light pb-5 pt-5" id="project">
+            <div class="container">
+
+                 <div class="text-center mb-5">
+                    <h2 class="mb-10">Nouvelles Sorties</h2>
+                    <p>Toutes nos randonnées sont organisées et accompagnées.<br>Rendez-vous au lieu de départ et laissez vous emporter.</p>
+                </div>
+
+                <div class="card-columns">
+
+                    <div class="card">
+                        <div class=" clickable bg-dark text-light">
+                            <div>
+                                <span class="card-img-top img-fluid rounded" data-img="img/photos/1.jpg">Rando 1</span>
+                                <div class="shadow-color" data-bg="img/photos/1.jpg"></div>
+                            </div>
+                            <div class="card-body">
+                                <div class="card-text text-muted"><small>12/06/2019 - 1 jour</small></div>
+                                <h3 class="h5 card-title"><a href="#contact">1</a></h3>
+                                <p>Description court lorem ipsum.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class=" clickable bg-dark text-light">
+                            <div>
+                                <span class="card-img-top img-fluid rounded" data-img="img/photos/2.jpg">Rando 1</span>
+                                <div class="shadow-color" data-bg="img/photos/1.jpg"></div>
+                            </div>
+                            <div class="card-body">
+                                <div class="card-text text-muted"><small>12/06/2019 - 1 jour</small></div>
+                                <h3 class="h5 card-title"><a href="#contact">2</a></h3>
+                                <p>Description court lorem ipsum.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class=" clickable bg-dark text-light">
+                            <div>
+                                <span class="card-img-top img-fluid rounded" data-img="img/photos/3.jpg">Rando 1</span>
+                                <div class="shadow-color" data-bg="img/photos/1.jpg"></div>
+                            </div>
+                            <div class="card-body">
+                                <div class="card-text text-muted"><small>12/06/2019 - 1 jour</small></div>
+                                <h3 class="h5 card-title"><a href="#contact">3</a></h3>
+                                <p>Description court lorem ipsum.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class=" clickable bg-dark text-light">
+                            <div>
+                                <span class="card-img-top img-fluid rounded" data-img="img/photos/6.jpg">Rando 1</span>
+                                <div class="shadow-color" data-bg="img/photos/1.jpg"></div>
+                            </div>
+                            <div class="card-body">
+                                <div class="card-text text-muted"><small>12/06/2019 - 1 jour</small></div>
+                                <h3 class="h5 card-title"><a href="#contact">Direction le Puy de Dôme</a></h3>
+                                <p>Description court lorem ipsum.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class=" clickable bg-dark text-light">
+                            <div>
+                                <span class="card-img-top img-fluid rounded" data-img="img/photos/4.jpg">Rando 1</span>
+                                <div class="shadow-color" data-bg="img/photos/1.jpg"></div>
+                            </div>
+                            <div class="card-body">
+                                <div class="card-text text-muted"><small>12/06/2019 - 1 jour</small></div>
+                                <h3 class="h5 card-title"><a href="#contact">4</a></h3>
+                                <p>Description court lorem ipsum.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class=" clickable bg-dark text-light">
+                            <div>
+                                <span class="card-img-top img-fluid rounded" data-img="img/photos/4.jpg">Rando 1</span>
+                                <div class="shadow-color" data-bg="img/photos/1.jpg"></div>
+                            </div>
+                            <div class="card-body">
+                                <div class="card-text text-muted"><small>12/06/2019 - 1 jour</small></div>
+                                <h3 class="h5 card-title"><a href="#contact">5</a></h3>
+                                <p>Description court lorem ipsum.</p>
+                            </div>
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
         </section>
