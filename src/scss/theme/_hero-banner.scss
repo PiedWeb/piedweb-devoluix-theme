@@ -32,6 +32,7 @@
 }
 
 .noscreen {
+    position: relative;
     .banner-content {
         @extend .pt-5;
         @extend .pb-4;
@@ -67,11 +68,6 @@
         span{
             text-transform:uppercase;
             font-weight:700;
-        }
-        br {
-            @include media-breakpoint-down (md) {
-                display: none;
-            }
         }
     }
 
