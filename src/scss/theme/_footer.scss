@@ -88,10 +88,10 @@
 
     .footer-text {
         padding-top:20px;
-        a,i{
+        a,i,.a{
             color: $footer-block-color-a;
         }
-        a:hover {
+        a:hover,.a:hover{
             color: rgba($footer-block-color-a, 0.7);
         }
         li {
