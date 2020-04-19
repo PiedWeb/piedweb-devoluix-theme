@@ -60,7 +60,7 @@
     max-width: 1320px;
 }
 
-p a {
+p a, p .a {
     &:not(.btn) {
         text-decoration: underline;
     }

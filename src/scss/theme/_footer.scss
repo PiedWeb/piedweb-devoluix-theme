@@ -3,7 +3,7 @@
     font-size: $extra-footer-font-size;
     @extend .p-5;
     background-color: $footer-background-color;
-    a {
+    a, .a {
         color: $extra-footer-color-a;
         &:hover {
             color: rgba($extra-footer-color-a, 0.7);
