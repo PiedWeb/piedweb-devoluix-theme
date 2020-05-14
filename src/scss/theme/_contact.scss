@@ -1,15 +1,15 @@
 .contact-form{
-	input{
-		padding: 15px;
-	}
-	input,textarea{
-		border-radius:0;
-		font-size:12px;
-	}
-	textarea{
-		height: 180px;
-		margin-top: 0px;
-	}
+    input{
+        padding: 15px;
+    }
+    input,textarea{
+        border-radius:0;
+        font-size:12px;
+    }
+    textarea{
+        height: 180px;
+        margin-top: 0px;
+    }
 }
 
 // <div class=contact-evw>
@@ -90,8 +90,6 @@
         }
     }
 }
-
-@include bg-gradient-variant('.contact-header', $primary);
 
 @keyframes fadein {
     from { opacity: 0; }

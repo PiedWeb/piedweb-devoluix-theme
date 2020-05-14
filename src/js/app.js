@@ -7,85 +7,76 @@
 
 /* Import CSS */
 /* Import JS Lib */
-import BootstrapCookieConsent from 'bootstrap-cookie-consent'
+import BootstrapCookieConsent from "bootstrap-cookie-consent";
 
-import baguetteBox from 'baguettebox.js'
+import baguetteBox from "baguettebox.js";
 
-import Macy from 'macy'
+import Macy from "macy";
 
-import { tns } from '~/node_modules/tiny-slider/src/tiny-slider'
+import { tns } from "~/node_modules/tiny-slider/src/tiny-slider";
 
-import { watchVideoInBootstrapModal, activePanelInACorner } from './helpers.js'
+import { watchVideoInBootstrapModal, activePanelInACorner } from "./helpers.js";
 
 import {
-  imgLazyLoad,
   backgroundLazyLoad,
-  convertInLinks,
-  convertInLinksFromRot13,
   clickable,
   resizeWithScreenHeight,
   wideImgCentered,
-  smoothScroll,
-  rot13ToText,
-  readableEmail,
   applySmoothScroll,
   addAClassOnScroll,
   allClickable
-} from '~/node_modules/piedweb-tyrol-free-bootstrap-4-theme/src/js/helpers.js'
+} from "~/node_modules/piedweb-tyrol-free-bootstrap-4-theme/src/js/helpers.js";
 
-require('../scss/main.scss')
+require("../scss/main.scss");
 
-var bsn = require('bootstrap.native/dist/bootstrap-native-v4')
+var bsn = require("bootstrap.native/dist/bootstrap-native-v4");
 
 /* Action */
-document.addEventListener('DOMContentLoaded', function () {
-  applyOnDomLoaded()
+document.addEventListener("DOMContentLoaded", function() {
+  applyOnDomLoaded();
   /**/
   new BootstrapCookieConsent({
-    services: ['StatistiquesAnonymes', 'YouTube'],
+    services: ["StatistiquesAnonymes", "YouTube"],
     services_descr: {
       StatistiquesAnonymes:
         "Nous permet d'améliorer le site en fonction de son utilisation",
-      YouTube: 'Affiche les vidéos du service youtube.com'
+      YouTube: "Affiche les vidéos du service youtube.com"
     },
-    method: 'bsn'
-  })
+    method: "bsn"
+  });
   /**/
-  if (document.querySelector('.tns') !== null) {
+  if (document.querySelector(".tns") !== null) {
     tns({
-      container: '.tns',
+      container: ".tns",
       controls: false,
       nav: false,
       autoWidth: true,
       loop: false,
       mouseDrag: true,
-      slideBy: 'page',
+      slideBy: "page",
       swipeAngle: false,
       items: 1
-    })
+    });
   }
-  watchVideoInBootstrapModal()
-  activePanelInACorner()
-  addAClassOnScroll('.navbar', 'nostick', 50)
-})
+  watchVideoInBootstrapModal();
+  activePanelInACorner();
+  addAClassOnScroll(".navbar", "nostick", 50);
+});
 
-function applyOnDomLoaded () {
-  allClickable('.clickable')
-  imgLazyLoad()
-  readableEmail('#contact-email')
-  backgroundLazyLoad()
-  convertInLinks()
-  applySmoothScroll()
-  baguetteBox.run('.mimg', {
-    captions: function (element) {
-      return element.getElementsByTagName('img')[0].alt
+function applyOnDomLoaded() {
+  allClickable(".clickable");
+  backgroundLazyLoad();
+  applySmoothScroll();
+  baguetteBox.run(".mimg", {
+    captions: function(element) {
+      return element.getElementsByTagName("img")[0].alt;
     }
-  })
-  wideImgCentered('.ic')
+  });
+  wideImgCentered(".ic");
 
-  if (document.querySelector('#flex-masonry') !== null) {
+  if (document.querySelector("#flex-masonry") !== null) {
     var masonry = new Macy({
-      container: '#flex-masonry',
+      container: "#flex-masonry",
       columns: 3,
       margin: {
         y: 12,
@@ -95,8 +86,8 @@ function applyOnDomLoaded () {
         1200: 2,
         768: 1
       }
-    })
+    });
   }
 
-  document.documentElement.className = 'js'
+  document.documentElement.className = "js";
 }
