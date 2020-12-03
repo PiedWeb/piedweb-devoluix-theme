@@ -1,80 +1,91 @@
 ::-moz-selection {
-    background-color: $primary;
-    color: $white;
+  background-color: $primary;
+  color: $white;
 }
 ::selection {
-    background-color: $primary;
-    color: $white;
+  background-color: $primary;
+  color: $white;
 }
 
 ::-webkit-input-placeholder {
-    color:    #777777;
-    font-weight: 300;
+  color: #777777;
+  font-weight: 300;
 }
 :-moz-placeholder {
-   color:    #777777;
-   opacity:  1;
-   font-weight: 300;
+  color: #777777;
+  opacity: 1;
+  font-weight: 300;
 }
 ::-moz-placeholder {
-   color:    #777777;
-   opacity:  1;
-   font-weight: 300;
+  color: #777777;
+  opacity: 1;
+  font-weight: 300;
 }
 :-ms-input-placeholder {
-   color:    #777777;
-   font-weight: 300;
+  color: #777777;
+  font-weight: 300;
 }
 ::-ms-input-placeholder {
-   color:    #777777;
-   font-weight: 300;
+  color: #777777;
+  font-weight: 300;
 }
 
 .txt-lg {
-    font-size: $font-size-lg;
+  font-size: $font-size-lg;
 }
 
 .btn-warning {
-    color: $warning;
+  color: $warning;
 }
 
 /**/
 .p1-gradient-color {
-  background: -moz-linear-gradient( 0deg, $dark-primary 0%, $primary 100%);
-  background: -webkit-linear-gradient( 0deg, $dark-primary 0%, $primary 100%);
-  background: -ms-linear-gradient( 0deg, $dark-primary 0%, $primary 100%);
+  background: -moz-linear-gradient(0deg, $dark-primary 0%, $primary 100%);
+  background: -webkit-linear-gradient(0deg, $dark-primary 0%, $primary 100%);
+  background: -ms-linear-gradient(0deg, $dark-primary 0%, $primary 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 /**/
 
 .container-txt {
-    @include make-container();
-    max-width: 720px;
-    margin-left: auto;
-    margin-right: auto;
+  @include make-container();
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .container-xxl {
-    @include make-container();
-    max-width: 1320px;
+  @include make-container();
+  max-width: 1320px;
 }
 
-p a, p .a {
-    &:not(.btn) {
-        text-decoration: underline;
-    }
+p a,
+p .a {
+  &:not(.btn) {
+    text-decoration: underline;
+  }
 }
 
 .ninja {
-    text-decoration: none !important;
-    color: inherit;
+  text-decoration: none !important;
+  color: inherit;
 }
 
 .hash {
-    display: block;
-    position: relative;
-    top: -150px;
-    visibility: hidden;
+  display: block;
+  position: relative;
+  top: -150px;
+  visibility: hidden;
 }
 
+.shadow-color {
+  transform: scale(0.94);
+  top: 14px;
+  filter: blur(10px);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  z-index: -1;
+}
